@@ -1,0 +1,17 @@
+html {
+    background-color: var(--normal_col);
+}
+
+header {
+    background-color: var(--dark_col);
+    display: flex;
+    flex-flow: row nowrap;
+    height: 15dvh;
+}
+
+.icon-wrapper {
+    display: flex;
+    height: 60%;
+    aspect-ratio: 1;
+    margin: ;
+}
