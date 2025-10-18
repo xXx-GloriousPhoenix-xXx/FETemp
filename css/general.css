@@ -1,17 +1,125 @@
 html {
+    height: 100%;
     background-color: var(--normal_col);
+    overflow-y: hidden;
 }
 
-header {
-    background-color: var(--dark_col);
+* {
+    font-family: 'Varela Round', 'Rubik', serif;
+}
+
+header, footer {
     display: flex;
     flex-flow: row nowrap;
-    height: 15dvh;
+
+    height: 10dvh;
+
+    background-color: var(--dark_col);
+}
+header {
+    justify-content: space-between;
+}
+footer {
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
-.icon-wrapper {
+.wrapper {
     display: flex;
-    height: 60%;
+}
+.icon.wrapper {
+    height: 100%;
     aspect-ratio: 1;
-    margin: ;
+}
+img.icon,
+svg-icon svg {
+    height: 60%;
+    width: auto;
+    margin: auto;
+    cursor: pointer;
+}
+svg-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.name.wrapper {
+    justify-content: center;
+    align-items: center;
+    padding: 0.25em;
+}
+h1.name {
+    color: var(--normal_col);
+    font-size: 1.5em;
+    transition: 250ms;
+}
+
+.social-media.wrapper {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    padding: 0 1dvh;
+}
+.text.wrapper {
+    justify-content: center;
+    align-items: center;
+}
+p.text {
+    color: var(--normal_col);
+    transition: 250ms;
+    cursor: pointer;
+}
+p.text:hover {
+    color: var(--bright_col);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.35em;
+    padding: 0 1em;
+}
+nav > button {
+    transition: 250ms;
+    color: var(--normal_col);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+}
+nav > button:hover {
+    color: var(--bright_col);
+}
+
+main {
+    height: 80dvh;
+
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--normal_col) var(--dark_col);
+}
+
+#logo {
+    display: flex;
+    cursor: pointer;
+}
+#logo:hover h1.name {
+    color: var(--bright_col);
+}
+
+main > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    background-color: var(--normal_col);
+
+    scroll-snap-align: start;
 }

@@ -1,0 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+h1, p {
+    margin: 0;
+    padding: 0;
+}
