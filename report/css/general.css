@@ -24,9 +24,27 @@ body {
     inset: 0 0 auto auto;
     background-color: gray;
 }
-/* body > * > * .wrapper {
+aside {
+    width: 15%;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+    flex-flow: column nowrap;
+}
+ul .wrapper {
+    background-color: forestgreen;
     padding: 0.25em 0.5em;
-} */
+}
+
+p {
+    margin: 0;
+}
+
+.sub {
+    margin-left: 2em;
+}
 nav {
     background-color: aquamarine;
 }
@@ -36,11 +54,14 @@ a {
 }
 main {
     background-color: yellow;
-
 }
+
 a:hover {
     color: red;
 }
+
+
+
 footer {
     background-color: crimson;
 }
