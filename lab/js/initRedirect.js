@@ -1,18 +1,3 @@
-
-
-const pagesRefs = [
-    {id: "logo", href: "/"},
-    {id: "home", href: "/"},
-    {id: "catalogue", href: "#"},
-    {id: "advice", href: "#"},
-    {id: "about-us", href: "#"}
-];
-
-const additionalRefs = [
-    {id: "copyright", href: "#"}
-];
-
-
 export const initRedirect = (id, href) => {
     const element = document.getElementById(id);
     element.addEventListener("click", () => {
@@ -24,8 +9,3 @@ export const initRedirect = (id, href) => {
         }
     });
 };
-
-
-
-
-

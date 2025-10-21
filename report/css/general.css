@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+}
+body {
+    height: 100dvh;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro {
+    position: relative;
+}
+.info {
+    flex-flow: column nowrap;
+    background-color: greenyellow;
+    width: 100%;
+}
+.profile {
+    position: absolute;
+    inset: 0 0 auto auto;
+    background-color: gray;
+}
+/* body > * > * .wrapper {
+    padding: 0.25em 0.5em;
+} */
+nav {
+    background-color: aquamarine;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+main {
+    background-color: yellow;
+
+}
+a:hover {
+    color: red;
+}
+footer {
+    background-color: crimson;
+}
