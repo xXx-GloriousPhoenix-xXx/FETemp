@@ -42,12 +42,12 @@
         <nav>
             <a href="./home.html">Головна</a>
             <a href="./catalogue.html">Каталог</a>
-            <!-- <a href="plant.html?name=sansevieria">Сторінка рослини</a> -->
+            
             <a href="./advice.html">Поради</a>
             <a href="./about.html">Про нас</a>
             <a href="./contact.html">Зворотній зв'язок</a>
         </nav>
-    </header>
+    </header>   
     <main>
         <section class="hero">
             <div class="wrapper">
@@ -187,6 +187,26 @@
                     </tbody>
                 </table>
             </div>
+        </section>
+        <section class="feedback">
+            <div class="header feeback">
+                <h2></h2>
+            </div>
+            <form class="feedback form wrapper" id="contactForm">
+                <div class="field wrapper">
+                    <input type="text" id="name" name="name" placeholder="Ваше ім’я" required>
+                    <label for="name">Ім'я</label>
+                </div>
+                <div class="field wrapper">
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    <label for="email">Електронна пошта</label>
+                </div>
+                <div class="field wrapper">
+                    <textarea id="message" name="message" rows="4" placeholder="Ваше повідомлення..." required></textarea>
+                    <label for="message">Повідомлення</label>
+                </div>
+                <button type="submit">Надіслати</button>
+            </form>
         </section>
     </main>
     <footer>

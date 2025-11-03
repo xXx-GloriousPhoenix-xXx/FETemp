@@ -1,6 +1,7 @@
 html {
     height: 100%;
     background-color: var(--normal_col);
+    font-size: 1dvw;
     overflow-y: hidden;
 }
 * {
@@ -17,22 +18,11 @@ header, footer {
 header {
     justify-content: space-between;
 }
-main {
-    height: 80dvh;
-
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-
-    scrollbar-width: thin;
-    scrollbar-color: var(--normal_col) var(--dark_col);
-}
 footer {
     position: relative;
     justify-content: center;
     align-items: center;
 }
-
 
 
 
@@ -105,16 +95,17 @@ nav > a {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    padding: 0 0.25em;
+    text-align: center;
 }
 nav > a:hover {
     color: var(--bright_col);
 }
 
-
-
 #logo {
     display: flex;
     cursor: pointer;
+    justify-content: start;
 }
 #logo:hover h1.name {
     color: var(--bright_col);
@@ -131,7 +122,7 @@ main > section {
 
     scroll-snap-align: start;
     color: var(--dark_col);
-    padding: 0 20dvw;
+    padding: 0 20em;
 }
 
 .hero {
@@ -152,7 +143,7 @@ main > section {
     width: auto;
 }
 .image.wrapper.item {
-    border: 0.75dvh solid var(--dark_col);
+    border: 0.2em solid var(--dark_col);
     border-radius: 2dvh;
     overflow: hidden;
     flex: 0 0 auto;
@@ -169,7 +160,7 @@ main > section {
 
 button.content {
     background-color: var(--normal_col);
-    border: 0.25em solid var(--dark_col);
+    border: 0.2em solid var(--dark_col);
     border-radius: 2em;
     padding: 0.25em 0.5em;
     cursor: pointer;
@@ -199,15 +190,6 @@ div.top-5.main {
     gap: 1em;
 }
 
-.hero .image.wrapper.item {
-    width: 30dvh;
-    height: 30dvh;
-}
-.top-5 .image.wrapper.item {
-    width: 20dvh;
-    height: 20dvh;
-}
-
 .text.wrapper {
     gap: 0.5em;
     flex-flow: column;
@@ -224,7 +206,7 @@ table.advice {
 div.advice.main {
     border-radius: 1em;
     overflow: hidden;
-    border: 0.15em solid var(--dark_col);
+    border: 0.2em solid var(--dark_col);
 }
 
 table.advice td:first-child {
@@ -236,9 +218,149 @@ table.advice tr > * {
 }
 
 table.advice td {
-    border-top: 0.15em solid var(--dark_col);
+    border-top: 0.2em solid var(--dark_col);
 }
 
 table.advice tr > *:not(:last-child) {
-    border-right: 0.15em solid var(--dark_col);
+    border-right: 0.2em solid var(--dark_col);
+}
+
+.field.wrapper {
+    flex-flow: column nowrap;
+    gap: 0.25em;
+}
+.field.wrapper label {
+    margin-left: 1em;
+}
+form {
+    background-color: transparent;
+    border: 0.2em solid var(--dark_col);
+    padding: 1em;
+    border-radius: 1.5em;
+}
+.field.wrapper input,
+.field.wrapper textarea,
+form button {
+    background-color: transparent;
+    color: var(--dark_col);
+    border: 0.2em solid var(--dark_col);
+    border-radius: 1em;
+    padding: 0.25em 0.5em;
+    transition: 250ms;
+    width: 20em;
+}
+.field.wrapper label {
+    transition: 250ms;
+}
+.field.wrapper *:first-child:hover,
+.field.wrapper *:first-child:hover ~ label,
+.field.wrapper *:first-child:focus,
+.field.wrapper *:first-child:focus ~ label,
+form.feedback button:hover { 
+    color: var(--bright_col);
+    border-color: var(--bright_col);
+}
+
+.field.wrapper {
+    flex-flow: column-reverse nowrap;
+}
+
+.hero .image.wrapper.item {
+    width: 30dvh;
+    height: 30dvh;
+}
+.top-5 .image.wrapper.item {
+    width: 20dvh;
+    height: 20dvh;
+}
+
+.field.wrapper textarea {
+    resize: none;
+    height: 6em;
+}
+.field.wrapper input {
+    height: 2em;
+}
+
+form.feedback {
+    gap: 1em;
+    flex-flow: column nowrap;
+}
+form button {
+    cursor: pointer;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    outline: none;
+}
+
+@media screen and (min-width: 768px) {
+    
+    main {
+        height: 80dvh;
+
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+
+        scrollbar-width: thin;
+        scrollbar-color: var(--normal_col) var(--dark_col);
+    }
+}
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 1.25dvh;
+        overflow-y: scroll;
+    }
+    #logo {
+        display: none;
+    }
+    img.icon {
+        padding-right: 1em;
+        height: 80%;
+    }
+    main {
+        display: flex;
+        gap: 1.5em;
+        padding: calc(1.5em + 10dvw) 0;
+        flex-flow: column nowrap;
+    }
+    .hero .image.wrapper.item {
+        width: 40dvw;
+        height: auto;
+    }
+    .top-5 .image.wrapper.item {
+        width: 70%;
+        height: auto;
+    }
+    main section {
+        padding: 10dvw 5dvw;
+        height: auto;
+    }
+    nav {
+        width: 100%;
+    }
+    div.top-5.main {
+        flex-flow: column nowrap;
+        gap: 2em;
+    }
+    section.top-5:nth-child(even) > div.top-5.main {
+        flex-flow: column-reverse nowrap;
+    }
+    .content.wrapper {
+        gap: 2em;
+    }
+    h2 {
+        font-size: 1.65em;
+    }
+    p {
+        font-size: 1.25em;
+    }
+    button,
+    label,
+    input,
+    textarea {
+        font-size: 1.25em;
+    }    
 }
