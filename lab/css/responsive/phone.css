@@ -1,8 +1,6 @@
-/* Phone (Portrait) */
 @media screen and (max-width: 480px) {
     html {
         font-size: 1.25dvh;
-        overflow-y: scroll;
     }
     #logo {
         display: none;
@@ -54,9 +52,4 @@
     textarea {
         font-size: 1.25em;
     }    
-}
-
-/* Phone landscape */
-@media screen and (min-width: 481px) and (max-width: 600px) {
-    
 }

@@ -1,3 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/root.css">
+    <link rel="stylesheet" href="../../css/general.css">
+    <title>Report</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper centered intro">
+            <div class="wrapper centered info">
+                <div class="wrapper centered labname">
+                    <h1>Звіти з лабораторних робіт</h1>        
+                    <h1>з дисципліни «WEB-орієнтовані технології. FrontEnd розробки»</h1>
+                </div>
+                <div class="wrapper centered author">
+                    <p>Виконавець: Студент групи ІП-34 Приходько Роман Юрійович</p>
+                </div>
+            </div>
+            <div class="wrapper centered profile">
+                <img class="profile" src="../../img/pfp.jpg" alt="pfp">
+            </div>
+        </div>
+        <nav id="lablist" class="wrapper centered"></nav>
+    </header>
+    <main>
+        <aside class="wrapper centered">
+            <ul>
+                <li>
+                    <div class="wrapper">
+                        <a href="index-1.html">Тема. Мета. Місце розташування сайту, звіту</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrapper">
+                        <a href="index-2.html">Способи підключення стилів</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrapper active">
+                        <a href="index-3.html">Селектори</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrapper sub">
+                        <a href="index-4.html">Селектори тегу</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrapper sub">
+                        <a href="index-5.html">Селектори класу</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrapper sub">
+                        <a href="index-6.html">Селектори ідентифіторів</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrapper sub">
+                        <a href="index-7.html">Інші селектори</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrapper">
+                        <a href="index-8.html">Висновки</a>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+        <section class="wrapper lab-content">
+            <h4>Набір стилів, які були застосовані до кожної HTML-сторінки:</h4>
+            <pre>
+:root {
+    --bright_col: rgb(122, 199, 79);
+    --normal_col: rgb(97, 171, 54);
+    --dark_col: rgb(70, 124, 39); 
+}
 html {
     height: 100%;
     background-color: var(--normal_col);
@@ -81,7 +161,7 @@ nav {
     font-size: 1.35em;
     padding: 0 1em;
 }
-nav > a {
+nav &gt; a {
     transition: 250ms;
     color: var(--normal_col);
     background-color: transparent;
@@ -92,7 +172,7 @@ nav > a {
     text-align: center;
     display: inline;
 }
-nav > a:hover {
+nav &gt; a:hover {
     color: var(--bright_col);
 }
 
@@ -108,7 +188,7 @@ nav > a:hover {
 .hero {
     gap: 2em;
 }
-.hero > .wrapper {
+.hero &gt; .wrapper {
     display: flex;
     justify-content: stretch;
     flex-flow: column nowrap;
@@ -128,7 +208,7 @@ nav > a:hover {
     overflow: hidden;
     flex: 0 0 auto;
 }
-.image.wrapper.item > img {
+.image.wrapper.item &gt; img {
     width: 100%;
     height: 100%;
 }
@@ -191,7 +271,7 @@ table.advice td:first-child {
     text-align: center;
 }
 
-table.advice tr > * {
+table.advice tr &gt; * {
     padding: 0.25em 0.5em;
 }
 
@@ -199,7 +279,7 @@ table.advice td {
     border-top: 0.2em solid var(--dark_col);
 }
 
-table.advice tr > *:not(:last-child) {
+table.advice tr &gt; *:not(:last-child) {
     border-right: 0.2em solid var(--dark_col);
 }
 
@@ -272,6 +352,13 @@ form button {
     box-sizing: border-box;
     outline: none;
 }
-main > section {
-    color: var(--dark_col);
-}
+            </pre>
+        </section>
+    </main>
+    <footer class="wrapper centered">
+        <p>Copyright @ 2025 Приходько Роман</p>
+    </footer>
+    <script src="../../js/loadLabList.js"></script>
+    <script src="../js/initData.js"></script>
+</body>
+</html>

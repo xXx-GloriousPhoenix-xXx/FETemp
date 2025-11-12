@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+table {
+    width: 100%;
+    border: 0.2em solid black;
+    height: 100%;
+    border-collapse: collapse;
+}
+td {
+    border: 0.2em solid black;
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr.top, tr.bottom {
+    height: 10%;
+}
+
+td.top, td.bottom {
+    background-color: royalblue;
+}
+td.left {
+    width: 10%;
+    background-color: yellow;
+}
+td.right {
+    width: 5%;
+    background-color: lightgray;
+}
